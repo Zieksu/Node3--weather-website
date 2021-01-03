@@ -10,6 +10,7 @@ const viewPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //setup for handelbars
 app.set('view engine','hbs')
@@ -92,6 +93,6 @@ app.get('*', (req, res)=>{
     })
 })
 
-app.listen(3000, ()=>{
-    console.log('Server is up and running in port 3000')
+app.listen(port, ()=>{
+    console.log('Server is up and running in port ' + port)
 })
