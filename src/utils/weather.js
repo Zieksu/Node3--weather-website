@@ -31,7 +31,8 @@ const weather = (latitude, longitude, callback) => {
             callback(undefined, 'Please try again some other time')
         }
         else{
-            callback(undefined, 'Current Weather Description: ' + body.weather[0].description +'. Temperature of '+ body.main.temp + ' degrees with wind speeds of ' + body.wind.speed + ' mph.')
+            //console.log(body)
+            callback(undefined, 'Current Weather Description: ' + body.weather[0].description +'. Temperature of '+ body.main.temp + ' degrees with wind speeds of ' + body.wind.speed + ' mph. A maximum temperature of ' + body.main.temp_max + ' degrees and a minimum temperature of ' + body.main.temp_min + ' degrees.')
         }
     })
 }
